@@ -5,7 +5,7 @@
 **Exploration of bike share data from Chicago, New York City, Washington DC**
 
 ### Description
-Computation of statistics from bicycle-sharing systems analyzing _bike share usage patterns_ by users.
+Computation of statistics from bicycle-sharing systems analyzing **_bike share usage patterns_** by users. It calculates popular day, time, frequent trips travelled in addition to user's gender and birth year.
 
 ### Files used
 * chicago.csv
