@@ -2,10 +2,10 @@
 April 4, 2020
 
 ### Project Title
-Replace the Project Title
+**Exploration of bike share data from Chicago, New York City, Washington DC**
 
 ### Description
-Describe what your project is about and what it does
+Computation of statistics from bicycle-sharing systems analyzing _bike share usage patterns_ by users. 
 
 ### Files used
 Include the files used
