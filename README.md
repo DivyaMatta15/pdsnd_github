@@ -5,10 +5,13 @@ April 4, 2020
 **Exploration of bike share data from Chicago, New York City, Washington DC**
 
 ### Description
-Computation of statistics from bicycle-sharing systems analyzing _bike share usage patterns_ by users. 
+Computation of statistics from bicycle-sharing systems analyzing _bike share usage patterns_ by users.
 
 ### Files used
-Include the files used
+* chicago.csv
+* new_york_city.csv
+* washington.csv
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+https://help.github.com/en/github/creating-cloning-and-archiving-repositories/about-readmes
+https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf
