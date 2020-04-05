@@ -1,5 +1,5 @@
 ### Date created
-April 4, 2020
+**April 4, 2020**
 
 ### Project Title
 **Exploration of bike share data from Chicago, New York City, Washington DC**
