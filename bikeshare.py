@@ -44,9 +44,9 @@ def get_filters():
             break
         else:
             print('That\'s is not a valid month')
-    
-    # TO DO: get user input for day of week (all, monday, tuesday, ... sunday) 
-    while True:             
+
+    # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
+    while True:
         day = input('Enter the day of week (all in small case alphabets)-- sunday, monday, tuesday or any other day or type all to include all days: \n')
         if day == 'all':
             break
@@ -78,7 +78,7 @@ def load_data(city, month, day):
 
     # extract month and day of week from Start Time to create new columns
     df['month'] = df['Start Time'].dt.month
-    df['day_of_week'] = df[['Start Time']].apply(lambda x: datetime.datetime.strftime(x['Start Time'], '%A'), axis=1)
+    df['day_of_week'] = df['Start Time'].dt.weekday_name
 
     data_info = input('\nWould you like to see the first 5 rows of raw data? Enter yes or no.\n')
     if data_info.lower() != 'no':
@@ -103,15 +103,15 @@ def load_data(city, month, day):
         # use the index of the months list to get the corresponding int
         #months = ['january', 'february', 'march', 'april', 'may', 'june']
         month = months.index(month) +1
-    
+
         # filter by month to create the new dataframe
-        df = df[df.month == month] 
+        df = df[df.month == month]
 
     # filter by day of week if applicable
     if day != 'all':
         # filter by day of week to create the new dataframe
         df = df[df.day_of_week == day.title()]
-    
+
     return df
 
 
@@ -125,11 +125,11 @@ def time_stats(df):
     common_month = df['month'].mode()[0]
     common_month_name = months[common_month -1].title()
     print('Most common month: ', common_month_name)
-    
+
     # TO DO: display the most common day of week
     common_day = df['day_of_week'].mode()[0]
     print('Most common day: ', common_day)
-    
+
     # TO DO: display the most common start hour
     start_hour = df['Start Time'].dt.hour
     common_start_hour = start_hour.mode()[0]
@@ -163,7 +163,7 @@ def station_stats(df):
         print('Count for most popular trip: ', frequent_combination[i][1])
 
     print('\nThis took %s seconds.' % (time.time() - start_time))
-    
+
     print('-'*40)
 
 def trip_duration_stats(df):
